@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* モーダル出現アニメーション */
+  @keyframes modal-in {
+    from {
+      opacity: 0;
+      transform: scale(0.94) translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+  .animate-modal-in {
+    animation: modal-in 0.22s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  /* オーバーレイフェードイン */
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  .animate-fade-in {
+    animation: fade-in 0.18s ease-out both;
+  }
+
+  /* カードスライドイン */
+  @keyframes slide-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .animate-slide-in {
+    animation: slide-in 0.2s ease-out both;
+  }
+
+  /* PIN入力エラー時シェイク */
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    18%  { transform: translateX(-10px); }
+    36%  { transform: translateX(10px); }
+    54%  { transform: translateX(-7px); }
+    72%  { transform: translateX(7px); }
+    90%  { transform: translateX(-3px); }
+  }
+  .animate-shake {
+    animation: shake 0.48s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  }
+
+  /* PINドット・ポップ */
+  @keyframes pin-pop {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.35); }
+    100% { transform: scale(1); }
+  }
+  .animate-pin-pop {
+    animation: pin-pop 0.15s ease-out both;
+  }
+}

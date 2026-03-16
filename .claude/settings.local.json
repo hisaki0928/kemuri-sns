@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(npm install:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(npm --version)",
+      "Bash(New-Item -ItemType Directory -Force -Path \"C:\\\\Users\\\\fukuh\\\\OneDrive\\\\シーシャ管理\\\\src\\\\hooks\")",
+      "Bash(Out-Null)",
+      "Bash(Write-Host \"done\")",
+      "Skill(claude-api)",
+      "Skill(claude-api:*)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(''''has_key:'''', bool\\(d.get\\(''''apiKey''''\\) or d.get\\(''''api_key''''\\)\\)\\)\")"
+    ]
+  }
+}
